@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_bloc_25042023/count_event.dart';
+import 'package:flutter_bloc_25042023/demo_bloc_pattern/count_event.dart';
 
 class CountBloc {
   final StreamController<int> _countController = StreamController();
@@ -10,7 +10,7 @@ class CountBloc {
   Stream<int> getCountStream() => _countController.stream;
 
   CountBloc() {
-    _countController.sink.add(0);
+    _countController.sink.add(_total);
     _eventController.stream.listen((event) {
         if (event is IncreaseEvent) {
           handleIncreaseEvent(event);

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc_25042023/count_bloc.dart';
-import 'package:flutter_bloc_25042023/count_event.dart';
+import 'package:flutter_bloc_25042023/demo_bloc_pattern/count_bloc.dart';
 import 'package:provider/provider.dart';
 
-class DemoBlocPage extends StatefulWidget {
-  const DemoBlocPage({Key? key}) : super(key: key);
+import 'count_event.dart';
+
+class DemoBlocPatternPage extends StatefulWidget {
+  const DemoBlocPatternPage({Key? key}) : super(key: key);
 
   @override
-  State<DemoBlocPage> createState() => _DemoBlocPageState();
+  State<DemoBlocPatternPage> createState() => _DemoBlocPatternPageState();
 }
 
-class _DemoBlocPageState extends State<DemoBlocPage> {
+class _DemoBlocPatternPageState extends State<DemoBlocPatternPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
