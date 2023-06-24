@@ -7,7 +7,8 @@ class CountBlocLib extends Bloc<CountEventLibBase, CountState> {
 
   CountBlocLib(int number) : super(CountState(value: number)) {
      on<IncreaseEventLib>((event, emit) {
-
+        state.value += event.value;
+        emit(state);
      });
   }
 }
